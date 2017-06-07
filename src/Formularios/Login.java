@@ -101,11 +101,6 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         txt_usuario = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -113,18 +108,11 @@ public class Login extends javax.swing.JFrame {
         Barrita = new javax.swing.JProgressBar();
         btn_login = new javax.swing.JButton();
         btn_exit = new javax.swing.JButton();
+        jLabel_icono = new javax.swing.JLabel();
+        jLabel_fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("HH");
-
-        jLabel2.setText("MM");
-
-        jLabel3.setText("SS");
-
-        jLabel4.setText(":");
-
-        jLabel5.setText(":");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,14 +124,17 @@ public class Login extends javax.swing.JFrame {
                 txt_usuarioKeyTyped(evt);
             }
         });
+        getContentPane().add(txt_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 170, -1));
 
         jLabel6.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("USUARIO");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("CONTRASEÑA");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         txt_contra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,9 +146,11 @@ public class Login extends javax.swing.JFrame {
                 txt_contraKeyPressed(evt);
             }
         });
+        getContentPane().add(txt_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 170, -1));
 
         Barrita.setBackground(new java.awt.Color(0, 102, 255));
         Barrita.setForeground(new java.awt.Color(255, 102, 51));
+        getContentPane().add(Barrita, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 320, 20));
 
         btn_login.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         btn_login.setForeground(new java.awt.Color(0, 51, 51));
@@ -167,6 +160,7 @@ public class Login extends javax.swing.JFrame {
                 btn_loginActionPerformed(evt);
             }
         });
+        getContentPane().add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
 
         btn_exit.setFont(new java.awt.Font("Candara", 1, 18)); // NOI18N
         btn_exit.setForeground(new java.awt.Color(0, 51, 51));
@@ -176,72 +170,14 @@ public class Login extends javax.swing.JFrame {
                 btn_exitActionPerformed(evt);
             }
         });
+        getContentPane().add(btn_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 110, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jLabel1)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel4)
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel2)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel5)
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel6)
-                        .addGap(77, 77, 77)
-                        .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel7)
-                        .addGap(42, 42, 42)
-                        .addComponent(txt_contra, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(Barrita, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(btn_login)
-                        .addGap(127, 127, 127)
-                        .addComponent(btn_exit, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jLabel5))
-                    .addComponent(jLabel3))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(txt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(txt_contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(Barrita, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_login)
-                    .addComponent(btn_exit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
+        jLabel_icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/user.png"))); // NOI18N
+        jLabel_icono.setText("jLabel1");
+        getContentPane().add(jLabel_icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 240, 220));
+
+        jLabel_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo_blue.jpg"))); // NOI18N
+        getContentPane().add(jLabel_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -312,13 +248,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JProgressBar Barrita;
     private javax.swing.JButton btn_exit;
     private javax.swing.JButton btn_login;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel_fondo;
+    private javax.swing.JLabel jLabel_icono;
     private javax.swing.JPasswordField txt_contra;
     private javax.swing.JTextField txt_usuario;
     // End of variables declaration//GEN-END:variables

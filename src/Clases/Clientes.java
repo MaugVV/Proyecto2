@@ -1,6 +1,8 @@
 package Clases;
 
-public class Clientes {
+import java.io.Serializable;
+
+public class Clientes implements Serializable{
     String cedula, nombre, apellido, direccion, edad, telefono;
 
     public String getCedula() {

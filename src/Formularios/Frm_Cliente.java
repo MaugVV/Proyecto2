@@ -355,6 +355,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
                 txtdireccion.setText(elem.getDireccion());
                 txttelefono.setText(elem.getTelefono());
                 txtedad.setText(elem.getEdad());
+                confirma=true;
             }
         }
         if (!confirma) {

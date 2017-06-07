@@ -25,7 +25,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
     }
 
     public void cargarClientes() {
-        File f = new File("src\\Archivos\\empleados.txt");
+        File f = new File("src\\Archivos\\clientes.txt");
         try {
 
             if (f.exists()) {
@@ -42,7 +42,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }
-    
+
     public void borrar() {
         txtcedula.setText("");
         txtnombre.setText("");
@@ -334,7 +334,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Guardado con éxito!!");
             borrar();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, "error");
+            JOptionPane.showMessageDialog(rootPane, "error" + e.toString());
         }
 
 
@@ -348,7 +348,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
 
         Boolean confirma = false;
         for (Clientes elem : clientes) {
-
             if (txtcedula.getText().equals(elem.getCedula())) {
                 cedula = elem.getCedula();
                 txtnombre.setText(elem.getNombre());
@@ -358,10 +357,9 @@ public class Frm_Cliente extends javax.swing.JFrame {
                 txtedad.setText(elem.getEdad());
             }
         }
-        if(!confirma) {
-                JOptionPane.showMessageDialog(null, "CEDULA NO REGISTRADA");
+        if (!confirma) {
+            JOptionPane.showMessageDialog(null, "CEDULA NO REGISTRADA");
         }
-
     }//GEN-LAST:event_btnbusquedaActionPerformed
 
     private void btnmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmodificarActionPerformed

@@ -94,11 +94,23 @@ public class Frm_Empleado extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
         jLabel3.setText("Fecha de ingreso");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, -1, -1));
+
+        txtcedula.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcedulaKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtcedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 210, 30));
 
         jLabel4.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
         jLabel4.setText("Identificación:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
+
+        txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 320, 30));
 
         jLabel5.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
@@ -129,6 +141,12 @@ public class Frm_Empleado extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
         jLabel11.setText("Codigo");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+
+        txtciudad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtciudadKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtciudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 200, 30));
 
         txtcorreo.addActionListener(new java.awt.event.ActionListener() {
@@ -136,13 +154,29 @@ public class Frm_Empleado extends javax.swing.JFrame {
                 txtcorreoActionPerformed(evt);
             }
         });
+        txtcorreo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcorreoKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 200, 30));
+
+        txttelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txttelefonoKeyTyped(evt);
+            }
+        });
         getContentPane().add(txttelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 200, 190, 30));
         getContentPane().add(txtcargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 200, 30));
 
         txtsalario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtsalarioActionPerformed(evt);
+            }
+        });
+        txtsalario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtsalarioKeyTyped(evt);
             }
         });
         getContentPane().add(txtsalario, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 200, 30));
@@ -190,6 +224,12 @@ public class Frm_Empleado extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
         jLabel14.setText("Salario:");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
+
+        txtcodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcodigoKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 100, 30));
 
         btnModificar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -219,6 +259,12 @@ public class Frm_Empleado extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
         jLabel15.setText("Número:");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
+
+        txtsexo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtsexoKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtsexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 100, 40, 30));
 
         salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
@@ -236,6 +282,12 @@ public class Frm_Empleado extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Niagara Solid", 1, 24)); // NOI18N
         jLabel16.setText("Edad");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, -1, -1));
+
+        txtedad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtedadKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 100, 40, 30));
         getContentPane().add(date_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 300, -1, -1));
 
@@ -479,6 +531,42 @@ public class Frm_Empleado extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         cargarPacientes();        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
+
+    private void txtcodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcodigoKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodigoKeyTyped
+
+    private void txtcedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcedulaKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcedulaKeyTyped
+
+    private void txtnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreKeyTyped
+        new vld_textbox().soloLetras(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnombreKeyTyped
+
+    private void txtedadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtedadKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtedadKeyTyped
+
+    private void txtsexoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsexoKeyTyped
+        new vld_textbox().soloLetras(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtsexoKeyTyped
+
+    private void txtciudadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtciudadKeyTyped
+        new vld_textbox().soloLetras(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtciudadKeyTyped
+
+    private void txttelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txttelefonoKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txttelefonoKeyTyped
+
+    private void txtcorreoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcorreoKeyTyped
+               // TODO add your handling code here:
+    }//GEN-LAST:event_txtcorreoKeyTyped
+
+    private void txtsalarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsalarioKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtsalarioKeyTyped
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

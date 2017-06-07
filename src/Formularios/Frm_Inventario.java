@@ -158,6 +158,12 @@ public class Frm_Inventario extends javax.swing.JFrame {
         jLabel4.setText("Código");
         jLayeredPane1.add(jLabel4);
         jLabel4.setBounds(10, 20, 41, 26);
+
+        txtcode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcodeKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtcode);
         txtcode.setBounds(70, 20, 230, 30);
 
@@ -177,6 +183,12 @@ public class Frm_Inventario extends javax.swing.JFrame {
         jLabel10.setBounds(10, 100, 50, 26);
         jLayeredPane1.add(txtmodelo);
         txtmodelo.setBounds(70, 140, 230, 30);
+
+        txtcantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcantidadKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtcantidad);
         txtcantidad.setBounds(70, 180, 230, 30);
 
@@ -194,8 +206,20 @@ public class Frm_Inventario extends javax.swing.JFrame {
         jLabel3.setText("Descripción");
         jLayeredPane1.add(jLabel3);
         jLabel3.setBounds(110, 350, 80, 26);
+
+        txtprecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprecioKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtprecio);
         txtprecio.setBounds(70, 220, 230, 30);
+
+        txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtnombre);
         txtnombre.setBounds(70, 60, 230, 30);
         jLayeredPane1.add(txtmarca);
@@ -207,8 +231,20 @@ public class Frm_Inventario extends javax.swing.JFrame {
         jLabel11.setBounds(10, 260, 90, 26);
         jLayeredPane1.add(txtdes);
         txtdes.setBounds(20, 380, 280, 90);
+
+        txtcos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcosKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtcos);
         txtcos.setBounds(110, 260, 190, 30);
+
+        txtven.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtvenKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtven);
         txtven.setBounds(110, 300, 190, 30);
 
@@ -440,6 +476,30 @@ public class Frm_Inventario extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         cargarInventarios();        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
+
+    private void txtcodeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcodeKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodeKeyTyped
+
+    private void txtnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreKeyTyped
+        new vld_textbox().soloLetras(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnombreKeyTyped
+
+    private void txtcantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcantidadKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcantidadKeyTyped
+
+    private void txtprecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprecioKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtprecioKeyTyped
+
+    private void txtcosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcosKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcosKeyTyped
+
+    private void txtvenKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtvenKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtvenKeyTyped
 
     public void tabla() {
 

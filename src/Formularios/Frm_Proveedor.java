@@ -140,6 +140,12 @@ public class Frm_Proveedor extends javax.swing.JFrame {
         jLabel4.setText("Código");
         jLayeredPane1.add(jLabel4);
         jLabel4.setBounds(10, 10, 41, 26);
+
+        txtcode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcodeKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtcode);
         txtcode.setBounds(80, 10, 250, 20);
 
@@ -187,8 +193,20 @@ public class Frm_Proveedor extends javax.swing.JFrame {
         txtprod.setBounds(80, 290, 250, 20);
         jLayeredPane1.add(txtdirec);
         txtdirec.setBounds(80, 90, 250, 20);
+
+        txtele.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txteleKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtele);
         txtele.setBounds(80, 130, 250, 20);
+
+        txtcelular.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtcelularKeyTyped(evt);
+            }
+        });
         jLayeredPane1.add(txtcelular);
         txtcelular.setBounds(80, 170, 250, 20);
 
@@ -451,6 +469,18 @@ public class Frm_Proveedor extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "CEDULA NO REGISTRADA");
         }        // TODO add your handling code here:
     }//GEN-LAST:event_buscarActionPerformed
+
+    private void txtcodeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcodeKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodeKeyTyped
+
+    private void txteleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txteleKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txteleKeyTyped
+
+    private void txtcelularKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcelularKeyTyped
+        new vld_textbox().soloNumeros(evt);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcelularKeyTyped
 
     public void tabla() {
 

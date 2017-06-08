@@ -1,5 +1,5 @@
 FECHA : 08/06/2017
-NUMERO DE FACTURA : 2
+NUMERO DE FACTURA : 8
 CEDULA CLIENTE : 0940602585
 CLIENTE :ROMINA GONZALES 
 --------------------------------------------------
@@ -7,9 +7,9 @@ CLIENTE :ROMINA GONZALES
 --------------------------------------------------
 --------------EMPRESA  INTRISEG-------------------
 --------------------------------------------------
-PRODUCTO : Botiquin  CANTIDAD : 2  PRECIO : $20.0
+PRODUCTO : MANGUERAS DE EXTINTOR C.O.2   CANTIDAD : 3  PRECIO : $37.5
 --------------------------------------------------
-SUB-TOTAL : $40.0
-IVA : $5.6000000000000005
-TOTAL : $45.6
-TOTAL EN LETRAS: cuarenta y cinco con seis centavos
+SUB-TOTAL : $112.5
+IVA : $15.750000000000002
+TOTAL : $128.25
+TOTAL EN LETRAS: ciento veintiocho con veinticinco centavos

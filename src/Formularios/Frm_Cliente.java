@@ -148,7 +148,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Niagara Solid", 1, 18)); // NOI18N
         jLabel2.setText("Cedula");
 
-        txtcedula.setForeground(new java.awt.Color(255, 255, 0));
         txtcedula.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txttelefonoKeyTyped(evt);
@@ -159,7 +158,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Niagara Solid", 1, 18)); // NOI18N
         jLabel3.setText("Nombre:");
 
-        txtnombre.setForeground(new java.awt.Color(255, 255, 0));
         txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtedadKeyTyped(evt);
@@ -170,7 +168,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Niagara Solid", 1, 18)); // NOI18N
         jLabel4.setText("Apellido:");
 
-        txtapellido.setForeground(new java.awt.Color(255, 255, 0));
         txtapellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtedadKeyTyped(evt);
@@ -181,7 +178,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Niagara Solid", 1, 18)); // NOI18N
         jLabel5.setText("Dirección:");
 
-        txtedad.setForeground(new java.awt.Color(255, 255, 0));
         txtedad.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtedadKeyTyped(evt);
@@ -192,7 +188,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Niagara Solid", 1, 18)); // NOI18N
         jLabel6.setText("Teléfono:");
 
-        txttelefono.setForeground(new java.awt.Color(255, 255, 0));
         txttelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txttelefonoKeyTyped(evt);
@@ -203,7 +198,6 @@ public class Frm_Cliente extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Niagara Solid", 1, 18)); // NOI18N
         jLabel8.setText("Edad");
 
-        txtdireccion.setForeground(new java.awt.Color(255, 255, 0));
         txtdireccion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtdireccionKeyTyped(evt);

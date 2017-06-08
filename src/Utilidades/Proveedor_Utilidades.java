@@ -11,6 +11,10 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ComboBoxModel;
+import javax.swing.JComboBox;
 
 public class Proveedor_Utilidades {
     private String ruta;
@@ -67,4 +71,19 @@ public class Proveedor_Utilidades {
         }
         return proveedores;
     }
+    
+    public ComboBoxModel LlenarCombo(){
+            JComboBox combo=new JComboBox();
+            setRuta("src\\Archivos\\proveedores.txt");
+         try {
+             ArrayList<Proveedores> lista= consultarProveedor();
+             for(Proveedores p : lista){
+                 combo.addItem(p.getEmpresa());
+             }
+         } catch (IOException ex) {
+             Logger.getLogger(Proveedor_Utilidades.class.getName()).log(Level.SEVERE, null, ex);
+         }
+            
+         return combo.getModel();
+        }
 }

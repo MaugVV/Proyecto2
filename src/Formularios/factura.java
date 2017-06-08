@@ -5,7 +5,6 @@ import Utilidades.Cliente_Utilidades;
 import Utilidades.Detalle_Utilidades;
 import Utilidades.Factura_Utilidades;
 
-
 import Utilidades.vld_textbox;
 import Clases.Caja;
 import Clases.Clientes;
@@ -13,7 +12,7 @@ import Clases.Detalle;
 import Clases.Factura;
 import Clases.Inventarios;
 import Utilidades.Inventario_Utilidades;
-
+import Utilidades.n2t;
 
 import java.awt.Color;
 import java.io.File;
@@ -34,7 +33,7 @@ public class factura extends javax.swing.JFrame {
 
     ArrayList<Factura> facturas = new ArrayList<>();
     ArrayList<Detalle> detalles = new ArrayList<>();
-    String tirilla[]= new String[50];
+    String tirilla[] = new String[50];
     ArrayList<Inventarios> productos = new ArrayList<>();
     ArrayList<Clientes> clientes = new ArrayList<>();
     ArrayList<Caja> caja = new ArrayList<>();
@@ -156,7 +155,6 @@ public class factura extends javax.swing.JFrame {
                 combroProductos.addItem(elem.getCodigo() + "  " + elem.getNombre());
 
             }
-            
 
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(rootPane, "error");
@@ -694,15 +692,13 @@ public class factura extends javax.swing.JFrame {
             co = co - 1;
         } else {
             for (Inventarios elem : productos) {
-                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 4).trim())) {
+                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 1).trim())) {
                     String registro[] = {elem.getNombre(), txtcantidad.getText(), elem.getPrecio().toString()};
                     tm.addRow(registro);
                     TablaFactura.setModel(tm);
                     st += elem.getPrecio() * Double.parseDouble(txtcantidad.getText());
                 }
             }
-
-          
 
             st = st;
             iva = st * 0.14;
@@ -740,16 +736,16 @@ public class factura extends javax.swing.JFrame {
 
             facturas.add(f);
             co.guardarCliente(facturas);
-            tirilla[0]="FECHA : "+lblfecha.getText();
-            tirilla[1]="NUMERO DE FACTURA : "+lblNumero.getText();
-            tirilla[2]="CEDULA CLIENTE : "+txtcedula.getText();
-            tirilla[3]="CLIENTE :"+txtcliente.getText();
-            tirilla[4]="--------------------------------------------------";
-            tirilla[5]="----------------PRODUCTOS-------------------------";
-            tirilla[6]="--------------------------------------------------";
-            tirilla[7]="--------------EMPRESA  INTRISEG-------------------";
-            tirilla[8]="--------------------------------------------------";
-            int c=9;
+            tirilla[0] = "FECHA : " + lblfecha.getText();
+            tirilla[1] = "NUMERO DE FACTURA : " + lblNumero.getText();
+            tirilla[2] = "CEDULA CLIENTE : " + txtcedula.getText();
+            tirilla[3] = "CLIENTE :" + txtcliente.getText();
+            tirilla[4] = "--------------------------------------------------";
+            tirilla[5] = "----------------PRODUCTOS-------------------------";
+            tirilla[6] = "--------------------------------------------------";
+            tirilla[7] = "--------------EMPRESA  INTRISEG-------------------";
+            tirilla[8] = "--------------------------------------------------";
+            int c = 9;
             for (int i = 0; i < filas; i++) {
 
                 Detalle df = new Detalle();
@@ -761,19 +757,29 @@ public class factura extends javax.swing.JFrame {
                 DisminuirStock(modelo.getValueAt(i, 0).toString(), Integer.parseInt((String) modelo.getValueAt(i, 1)));
                 detalles.add(df);
                 dfs.guardarCliente(detalles);
-                 tirilla[c]="PRODUCTO : "+modelo.getValueAt(i, 0).toString()+"  CANTIDAD : "+(String) modelo.getValueAt(i, 1)+"  PRECIO : $"+(String) modelo.getValueAt(i, 2);
-                 c++;
-                 
+                tirilla[c] = "PRODUCTO : " + modelo.getValueAt(i, 0).toString() + "  CANTIDAD : " + (String) modelo.getValueAt(i, 1) + "  PRECIO : $" + (String) modelo.getValueAt(i, 2);
+                c++;
+
             }
-          
-            tirilla[c]="--------------------------------------------------";
+
+            tirilla[c] = "--------------------------------------------------";
             c++;
-            tirilla[c]="SUB-TOTAL : $"+txtsubtotal.getText();
+            tirilla[c] = "SUB-TOTAL : $" + txtsubtotal.getText();
             c++;
-            tirilla[c]="IVA : $"+txtiva.getText();
+            tirilla[c] = "IVA : $" + txtiva.getText();
             c++;
-            tirilla[c]="TOTAL : $"+txttotal.getText();
-            co.escribir(tirilla,lblNumero.getText());
+            tirilla[c] = "TOTAL : $" + txttotal.getText();
+            c++;
+            n2t numero;
+            String res;
+            numero = new n2t();
+            res = txttotal.getText();
+            int posicionPunto = res.indexOf('.');
+            int sHastaPrimerPunto = Integer.parseInt(res.substring(0,posicionPunto));
+            int sDesdePrimerPunto = Integer.parseInt(res.substring(posicionPunto+1,res.length()));
+            String totalLetras = numero.convertirLetrasConDecimales(sHastaPrimerPunto, sDesdePrimerPunto);
+            tirilla[c]="TOTAL EN LETRAS: "+ totalLetras +" centavos";
+            co.escribir(tirilla, lblNumero.getText());
             JOptionPane.showMessageDialog(null, "Guardado con éxito!!");
             Limpiar();
             Numero();
@@ -900,7 +906,6 @@ public class factura extends javax.swing.JFrame {
 
     public void Cargar() {
 
-      
     }
 
     public void DisminuirStock(String c, int cantidad) {
@@ -914,10 +919,10 @@ public class factura extends javax.swing.JFrame {
                 if (c.equalsIgnoreCase(elem.getNombre())) {
                     s = elem;
                     productos.remove(elem);
-                        cant = s.getCantidad();
-                        cant = cant - cantidad;
-                        s.setCantidad(cant);
-                        productos.add(s);
+                    cant = s.getCantidad();
+                    cant = cant - cantidad;
+                    s.setCantidad(cant);
+                    productos.add(s);
                     break remover;
                 }
             }
@@ -925,7 +930,6 @@ public class factura extends javax.swing.JFrame {
         }
 
         try {
-          
 
             Inventario_Utilidades su = new Inventario_Utilidades();
             su.setRuta("src\\Archivos\\inventarios.txt");
@@ -936,7 +940,7 @@ public class factura extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "error");
         }
     }
-  
+
     Boolean bandera = false;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -22,6 +22,7 @@ public class Frm_Inventario extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         Disable();
+        tabla();
         
     }
 

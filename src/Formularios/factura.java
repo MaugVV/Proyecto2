@@ -692,7 +692,7 @@ public class factura extends javax.swing.JFrame {
             co = co - 1;
         } else {
             for (Inventarios elem : productos) {
-                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 4).trim())) {
+                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 1).trim())) {
                     String registro[] = {elem.getNombre(), txtcantidad.getText(), elem.getPrecio().toString()};
                     tm.addRow(registro);
                     TablaFactura.setModel(tm);
@@ -773,8 +773,12 @@ public class factura extends javax.swing.JFrame {
             n2t numero;
             String res;
             numero = new n2t();
-            res = numero.convertirLetras(Integer.parseInt(txttotal.getText().substring(0,2)));
-            tirilla[c]="TOTAL EN LETRAS: $"+ res;
+            res = txttotal.getText();
+            int posicionPunto = res.indexOf('.');
+            int sHastaPrimerPunto = Integer.parseInt(res.substring(0,posicionPunto));
+            int sDesdePrimerPunto = Integer.parseInt(res.substring(posicionPunto+1,res.length()));
+            String totalLetras = numero.convertirLetrasConDecimales(sHastaPrimerPunto, sDesdePrimerPunto);
+            tirilla[c]="TOTAL EN LETRAS: "+ totalLetras +" centavos";
             co.escribir(tirilla, lblNumero.getText());
             JOptionPane.showMessageDialog(null, "Guardado con éxito!!");
             Limpiar();

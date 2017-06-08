@@ -1,5 +1,5 @@
 FECHA : 08/06/2017
-NUMERO DE FACTURA : 5
+NUMERO DE FACTURA : 2
 CEDULA CLIENTE : 0929467652
 CLIENTE :GVGYV V
 --------------------------------------------------
@@ -7,8 +7,9 @@ CLIENTE :GVGYV V
 --------------------------------------------------
 --------------EMPRESA  INTRISEG-------------------
 --------------------------------------------------
-PRODUCTO : Botiquin  CANTIDAD : 1  PRECIO : $20.0
+PRODUCTO : CADENAS  CANTIDAD : 3  PRECIO : $20.0
 --------------------------------------------------
-SUB-TOTAL : $20.0
-IVA : $2.8000000000000003
-TOTAL : $22.8
+SUB-TOTAL : $60.0
+IVA : $8.4
+TOTAL : $68.4
+TOTAL EN LETRAS: $sesenta y ocho con cuatro

@@ -1,5 +1,5 @@
 FECHA : 08/06/2017
-NUMERO DE FACTURA : 2
+NUMERO DE FACTURA : 12
 CEDULA CLIENTE : 0940602585
 CLIENTE :ROMINA GONZALES 
 --------------------------------------------------
@@ -7,9 +7,9 @@ CLIENTE :ROMINA GONZALES
 --------------------------------------------------
 --------------EMPRESA  INTRISEG-------------------
 --------------------------------------------------
-PRODUCTO : Botiquin  CANTIDAD : 2  PRECIO : $20.0
+PRODUCTO : Botiquin  CANTIDAD : 1  PRECIO : $20.0
 --------------------------------------------------
-SUB-TOTAL : $40.0
-IVA : $5.6000000000000005
-TOTAL : $45.6
-TOTAL EN LETRAS: cuarenta y cinco con seis centavos
+SUB-TOTAL : $20.0
+IVA : $2.8000000000000003
+TOTAL : $22.8
+TOTAL EN LETRAS: veintidos con ocho centavos

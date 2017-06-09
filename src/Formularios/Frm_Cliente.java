@@ -422,7 +422,7 @@ public class Frm_Cliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnsalir2ActionPerformed
 
     private void txtedadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtedadKeyTyped
-        new vld_textbox().soloLetras(evt);
+        new vld_textbox().soloNumeros(evt);
     }//GEN-LAST:event_txtedadKeyTyped
 
     private void txttelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txttelefonoKeyTyped

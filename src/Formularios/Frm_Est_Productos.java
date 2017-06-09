@@ -7,6 +7,8 @@ import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
@@ -151,6 +153,23 @@ public void filtro() {
         DefaultTableModel tm=new DefaultTableModel(null,columnas);
         
         int i=0;
+        
+        Collections.sort(lista,new Comparator<Detalle>(){
+                  @Override
+                  public int compare(Detalle t, Detalle t1) {
+                      int c = 0;
+                      if(t.getCantidad()>t1.getCantidad()){
+                          c=-1;
+                      }
+                      if(t.getCantidad()<t1.getCantidad()){
+                          c=1;
+                      }
+                      if(t.getCantidad()==t1.getCantidad()){
+                          c=0;
+                      }
+                      return c;
+                  }
+              });
         for(Detalle e : lista){
             i++;
             String registro []={i+"",e.getServicio(),e.getCantidad()+""};

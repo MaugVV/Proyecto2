@@ -1,15 +1,16 @@
 FECHA : 08/06/2017
-NUMERO DE FACTURA : 3
-CEDULA CLIENTE : 0929467652
-CLIENTE :GVGYV V
+NUMERO DE FACTURA : 4
+CEDULA CLIENTE : 0940602584
+CLIENTE :ANGEL PEREZ
 --------------------------------------------------
 ----------------PRODUCTOS-------------------------
 --------------------------------------------------
 --------------EMPRESA  INTRISEG-------------------
 --------------------------------------------------
-PRODUCTO : CADENAS  CANTIDAD : 1  PRECIO : $20.0
+PRODUCTO : CABEZAL  CANTIDAD : 5  PRECIO : $7.0
+PRODUCTO : SOPORTES   CANTIDAD : 10  PRECIO : $4.2
 --------------------------------------------------
-SUB-TOTAL : $20.0
-IVA : $2.8000000000000003
-TOTAL : $22.8
-TOTAL EN LETRAS: veintidos con ocho centavos
+SUB-TOTAL : $77.0
+IVA : $10.780000000000001
+TOTAL : $87.78
+TOTAL EN LETRAS: ochenta y siete con setenta y ocho centavos

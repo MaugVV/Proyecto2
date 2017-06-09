@@ -50,6 +50,7 @@ public class factura extends javax.swing.JFrame {
         this.setLocationRelativeTo(rootPane);
         this.getContentPane().setBackground(Color.lightGray);
         Cargar();
+        hilo.start();
     }
 
     public void Numero() throws IOException {
@@ -122,7 +123,21 @@ public class factura extends javax.swing.JFrame {
         String date = sdf.format(new Date());
         return date;
     }
-
+    Thread hilo = new Thread(){
+        public  void run(){
+            for (int i = 0; i < 100000000; i++) {
+                 lblhora.setText(getHora().substring(0, 3));
+                lblminutos.setText(getHora().substring(3, 6));
+                lblsegundos.setText(getHora().substring(6, 8));
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(factura.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    
+    };
     public void cargarDetalles() {
 
         File f = new File("src\\Archivos\\" + det + "");
@@ -692,7 +707,7 @@ public class factura extends javax.swing.JFrame {
             co = co - 1;
         } else {
             for (Inventarios elem : productos) {
-                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 1).trim())) {
+                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 4).trim())) {
                     String registro[] = {elem.getNombre(), txtcantidad.getText(), elem.getPrecio().toString()};
                     tm.addRow(registro);
                     TablaFactura.setModel(tm);
@@ -716,7 +731,10 @@ public class factura extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "NO SE AH EFECTUADO EL PAGO CORRECTO");
             return;
         }
-
+        if (txtcedula.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "LLENE TODOS LOS CAMPOS");
+            return;
+        }
         TableModel modelo = TablaFactura.getModel();
         int filas = modelo.getRowCount();
 
@@ -784,7 +802,7 @@ public class factura extends javax.swing.JFrame {
             Limpiar();
             Numero();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, "error");
+            JOptionPane.showMessageDialog(null, "Guardado con éxito!!");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -937,7 +955,7 @@ public class factura extends javax.swing.JFrame {
             su.guardarInventario(productos);
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, "error");
+            JOptionPane.showMessageDialog(rootPane, "error al modificar stock");
         }
     }
 

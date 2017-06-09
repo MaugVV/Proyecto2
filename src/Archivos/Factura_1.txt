@@ -9,7 +9,7 @@ CLIENTE :ANGEL PEREZ
 --------------------------------------------------
 PRODUCTO : Botiquin  CANTIDAD : 1  PRECIO : $20.0
 --------------------------------------------------
-SUB-TOTAL : $20.0
-IVA : $2.8000000000000003
-TOTAL : $22.8
-TOTAL EN LETRAS: veintidos con ocho centavos
+SUB-TOTAL : $4.2
+IVA : $0.5880000000000001
+TOTAL : $4.788
+TOTAL EN LETRAS: cuatro con setecientos ochenta y ocho centavos

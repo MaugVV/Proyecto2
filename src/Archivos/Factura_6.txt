@@ -1,5 +1,5 @@
 FECHA : 08/06/2017
-NUMERO DE FACTURA : 4
+NUMERO DE FACTURA : 6
 CEDULA CLIENTE : 0940602584
 CLIENTE :ANGEL PEREZ
 --------------------------------------------------
@@ -7,9 +7,9 @@ CLIENTE :ANGEL PEREZ
 --------------------------------------------------
 --------------EMPRESA  INTRISEG-------------------
 --------------------------------------------------
-PRODUCTO : RECARGA EXTINTOR P.Q.S CAP. 10LBS   CANTIDAD : 4  PRECIO : $13.0
+PRODUCTO : Botiquin  CANTIDAD : 3  PRECIO : $20.0
 --------------------------------------------------
-SUB-TOTAL : $52.0
-IVA : $7.280000000000001
-TOTAL : $59.28
-TOTAL EN LETRAS: cincuenta y nueve con veintiocho centavos
+SUB-TOTAL : $60.0
+IVA : $8.4
+TOTAL : $68.4
+TOTAL EN LETRAS: sesenta y ocho con cuatro centavos

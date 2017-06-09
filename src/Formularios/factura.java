@@ -707,7 +707,7 @@ public class factura extends javax.swing.JFrame {
             co = co - 1;
         } else {
             for (Inventarios elem : productos) {
-                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0, 4).trim())) {
+                if (elem.getCodigo().equalsIgnoreCase(combroProductos.getSelectedItem().toString().substring(0,4).trim())) {
                     String registro[] = {elem.getNombre(), txtcantidad.getText(), elem.getPrecio().toString()};
                     tm.addRow(registro);
                     TablaFactura.setModel(tm);

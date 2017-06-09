@@ -86,6 +86,23 @@ public class Detalle_Utilidades {
         try {
             List<Detalle> detalle = leerCliente();
 
+              Collections.sort(detalle,new Comparator<Detalle>(){
+                  @Override
+                  public int compare(Detalle t, Detalle t1) {
+                      int c = 0;
+                      if(t.getCantidad()>t1.getCantidad()){
+                          c=-1;
+                      }
+                      if(t.getCantidad()<t1.getCantidad()){
+                          c=1;
+                      }
+                      if(t.getCantidad()==t1.getCantidad()){
+                          c=0;
+                      }
+                      return c;
+                  }
+              });
+             
             sumas = sumar(detalle);
 
         } catch (IOException ex) {
@@ -98,34 +115,29 @@ public class Detalle_Utilidades {
         ArrayList<Detalle> sumas = new ArrayList();
 
         Boolean conf = false;
-        int k=0;
-        int c =0;
-        for (int i = 0; i < l.size(); i++) {
+
+        for (int i = 0; i < l.size() - 1; i++) {
             Detalle d = l.get(i);
-            k++;
             conf = false;
-            
-             if(k==1){
-                 sumas.add(d);
-                 
-            }else{
-                  for (int j = 0; j < sumas.size(); j++) {
+            if (sumas.size() > 0) {
+                for (int j = 0; j < sumas.size(); j++) {
                     Detalle d1 = sumas.get(j);
                     if (d.getServicio().equalsIgnoreCase(d1.getServicio())) {
-                        c= d1.getCantidad() + d.getCantidad();
+                        int c = d.getCantidad() + d1.getCantidad();
                         d.setCantidad(c);
                         sumas.remove(j);
                         sumas.add(d);
                         conf = true;
                     }
                 }
-                if(!conf){
+                if (conf == false) {
                     sumas.add(d);
                 }
+            } else {
+                sumas.add(d);
             }
-         
-            
-         }
+
+        }
 
         return sumas;
     }

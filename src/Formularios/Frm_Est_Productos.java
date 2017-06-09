@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 
@@ -152,6 +153,29 @@ public void filtro() {
         String columnas[]={"N°","PRODUCTO","CANTIDAD"};
         DefaultTableModel tm=new DefaultTableModel(null,columnas);
         
+        TableModel modelo = tabla1.getModel();
+        int filas = modelo.getRowCount();
+        int j=0;
+        int can = 0;
+        Boolean b = false;
+        
+        Collections.sort(lista,new Comparator<Detalle>(){
+                  @Override
+                  public int compare(Detalle t, Detalle t1) {
+                      int c = 0;
+                      if(t.getCantidad()>t1.getCantidad()){
+                          c=-1;
+                      }
+                      if(t.getCantidad()<t1.getCantidad()){
+                          c=1;
+                      }
+                      if(t.getCantidad()==t1.getCantidad()){
+                          c=0;
+                      }
+                      return c;
+                  }
+              });
+        
         int i=0;
         
         Collections.sort(lista,new Comparator<Detalle>(){
@@ -177,6 +201,37 @@ public void filtro() {
             if(i>9){break;}
         }
         tabla1.setModel(tm);
+        /*for(Detalle e : lista){
+            b= false;
+            j++;
+            if(j==1){
+                 String registro []={j+"",e.getServicio(),e.getCantidad()+""};
+                 tm.addRow(registro);
+                 tabla1.setModel(tm);
+                 
+            }else{
+                modelo = tabla1.getModel();
+                filas = modelo.getRowCount();
+                for (int i = 0; i < filas; i++) {
+
+                    if(modelo.getValueAt(i, 1).toString().equalsIgnoreCase(e.getServicio())){
+                        
+                        can = Integer.parseInt(modelo.getValueAt(i,2).toString())+e.getCantidad();
+                        modelo.setValueAt(can, i, 2);
+                        System.out.println(modelo.getValueAt(i,2).toString() +" "+e.getServicio());
+                        b=true;
+                    }
+                }
+                if(!b){
+                 String registro []={j+"",e.getServicio(),e.getCantidad()+""};
+                 tm.addRow(registro);
+                 tabla1.setModel(tm);
+                }
+            }
+            if(j>9){break;}
+        }*/
+       
+       
     }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

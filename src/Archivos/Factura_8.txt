@@ -1,15 +1,15 @@
 FECHA : 08/06/2017
-NUMERO DE FACTURA : 4
-CEDULA CLIENTE : 0940602584
-CLIENTE :ANGEL PEREZ
+NUMERO DE FACTURA : 8
+CEDULA CLIENTE : 0940602585
+CLIENTE :ROMINA GONZALES 
 --------------------------------------------------
 ----------------PRODUCTOS-------------------------
 --------------------------------------------------
 --------------EMPRESA  INTRISEG-------------------
 --------------------------------------------------
-PRODUCTO : RECARGA EXTINTOR P.Q.S CAP. 10LBS   CANTIDAD : 4  PRECIO : $13.0
+PRODUCTO : MANGUERAS DE EXTINTOR C.O.2   CANTIDAD : 3  PRECIO : $37.5
 --------------------------------------------------
-SUB-TOTAL : $52.0
-IVA : $7.280000000000001
-TOTAL : $59.28
-TOTAL EN LETRAS: cincuenta y nueve con veintiocho centavos
+SUB-TOTAL : $112.5
+IVA : $15.750000000000002
+TOTAL : $128.25
+TOTAL EN LETRAS: ciento veintiocho con veinticinco centavos
